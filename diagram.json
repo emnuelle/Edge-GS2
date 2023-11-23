@@ -1,0 +1,28 @@
+{
+  "version": 1,
+  "author": "Emanuelle Soares",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 67.2, "left": 110.44, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -261.2,
+      "left": 168.8,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "esp:25", "keypad1:C1", "green", [ "v0", "h-19.05", "v-96", "h144", "v28.8", "h67.2" ] ],
+    [ "esp:26", "keypad1:C2", "green", [ "h-28.65", "v-115.2", "h153.6", "v57.6", "h67.2" ] ],
+    [ "esp:27", "keypad1:C3", "green", [ "h-47.85", "v-105.6", "h163.2", "v48", "h96" ] ],
+    [ "keypad1:C4", "esp:14", "green", [ "v67.2", "h-115.5", "v-86.4", "h-144", "v144" ] ],
+    [ "esp:2", "keypad1:R1", "green", [ "h0" ] ],
+    [ "esp:16", "keypad1:R2", "green", [ "h0" ] ],
+    [ "esp:17", "keypad1:R3", "green", [ "h0" ] ],
+    [ "esp:18", "keypad1:R4", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
